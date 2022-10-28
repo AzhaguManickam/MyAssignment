@@ -1,0 +1,45 @@
+1) What is Selenium? What are the different Selenium components? Explain about Selenium Webdriver.
+    ans:Selenium is an automation testing tool used to test web-based applications. Selenium is not a single tool but a suite of tools. There are four components of Selenium – Selenium IDE, RC, WebDriver, and Grid. Last two being the most famous one.
+
+2) How does Selenium communicate with the Web browsers?
+ans:Selenium Script creates an HTTP Request for each selenium command and sends it to the browser driver. An HTTP request is then sent to the server using Browser Driver. The steps are executed on the HTTP server. The execution status is sent to the HTTP server which is then captured by the automation script.
+
+3.What are the locators available  to find an element using Selenium?
+ans:By CSS ID: find_element_by_id
+By CSS class name: find_element_by_class_name
+By name attribute: find_element_by_name
+By DOM structure or Xpath: find_element_by_xpath
+by tagName: find_element_by_tag_name()
+By link text: find_element_by_link_text
+By partial link text: find_element_by_partial_link_text
+By HTML tag name: find_element_by_tag_name
+
+4. Why ID is preferable than X-Path?
+ans:Technically speaking, By.ID() is the faster technique because at its root, the call goes down to document. getElementById(), which is optimized by most browsers. But, finding elements using XPath is better for locating elements having complex selectors, and is no
+ doubt the most flexible selection strategy.
+
+5.How to select value in dropdown?
+ans:selectByValue(): You can select an option by using Value attribute provided for each option in dropdown menu. So you can use this Value to select any particular option: WebElement element = driver. findElement(By.id("year")); Select select = new Select(element); select.
+
+6) What is the difference between Absolute Path and Relative Path?
+ans:An absolute path is defined as specifying the location of a file or directory from the root directory(/). In other words,we can say that an absolute path is a complete path from start of actual file system from / directory. Relative path is defined as the path related to the present working directly(pwd).
+
+7) How to verify if the given check box is checked or not (it is not taught but you can explore) Try here: http://leafground.com/pages/checkbox.html
+ans:WebElement checkbox = driver.findElement(By.id(" http://leafground.com/pages/checkbox.html"));
+//If the checkbox is unchecked then isSelected() will return false 
+//and NOT of false is true, hence we can click on checkbox
+if(!checkbox.isSelected())
+	checkbox.click();
+
+8)Difference between System.setProperty and WebDriverManager
+ans:
+in .set property we need to download and set the path
+but;
+webDriverManager automaticallly download and set the path 
+
+9) Write the syntax for preceding and following x-paths
+ans:xPath: //input[@id = 'u_0_2']//preceding::input (1 of 4 matched).
+    XPath: //a[text() = 'Videos']//preceding-sibling::a (1 of 3)
+10) How to get an attribute value using Selenium WebDriver?
+
+ans:The getAttribute() method helps to get the value of any attribute of a web element, which is returned as a String. If an attribute has a Boolean value, the method returns either True or null. Also, if there is no attribute, the method will return null
